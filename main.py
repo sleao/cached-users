@@ -53,7 +53,6 @@ def _call_api(username):
     else: print('Usuário não encontrado na API')
 
 def _get_user(username):
-    print(username)
     try:
         user = cache[username]
         return user
