@@ -48,11 +48,12 @@ def _call_api(username):
             _hemis(user['address']['geo']['lat']))
 
         _save_cache([email,website,hemisferio,username])
-        return (email,website,hemisferio)
+        return {'mail':email,'website':website,'hemisferio':hemisferio}
 
     else: print('Usuário não encontrado na API')
 
 def _get_user(username):
+    print(username)
     try:
         user = cache[username]
         return user
@@ -66,8 +67,9 @@ if __name__ == '__main__':
         # Seu código entra aqui
         cache = _load_cache()
         res = _get_user(username)
-        print(f"User: {username}\nMail: {res['mail']}\n" +
-            f"Website: {res['website']}\nHemisferio: {res['hemisferio']}")
+        if res:
+            print(f"User: {username}\nMail: {res['mail']}\n" +
+                f"Website: {res['website']}\nHemisferio: {res['hemisferio']}")
 
     else:
         print("passe um username")
