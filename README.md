@@ -1,4 +1,7 @@
-# Cached Users
+# About
+Esse repo contém minha solução pro problema descrito abaixo, que foi proposto como desafio para uma vaga de desenvolvedor em Python. Infelizmente, não consegui o job, mas achei que o código ficou bem decente, então deixei o repo público.
+
+## Cached Users
 
 Usar _cache_ é uma técnica comum para melhorar o tempo de execução de um software.
 
